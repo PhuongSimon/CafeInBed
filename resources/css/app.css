@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import 'tailwindcss';
+
+
+@source "../views";
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-oswald: "Oswald", "sans-serif";
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --tw-bg-opacity: 1;
+    --color-beige-50: rgb(255 245 235/var(--tw-bg-opacity));
+    --color-beige-100: #feeedc;
+    --color-beige-200: #f9e4cd;
+    --color-beige-300: #f1d1b1;
+    --color-beige-500: #d6a271;
+    --color-beige-600: #b88257;
+    --color-beige-700: #936a4e;
+    --color-beige-900: #3e2613;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg-beige-900\/60 {
+    background-color: #3e261399 !important;
+}
+
+.btn {
+    border-radius: 9999px;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    padding: .875rem 2rem;
+    text-align: center;
+    transition-duration: .15s;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    white-space: nowrap;
+}
