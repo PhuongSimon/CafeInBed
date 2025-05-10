@@ -13,12 +13,12 @@
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700">Họ và tên</label>
                         <input type="text" name="name" id="name" required
-                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]" />
+                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 text-sm shadow-sm bg-white/90 focus:border-[#3e2613] focus:ring-[#3e2613]" />
                     </div>
                     <div>
                         <label for="phone" class="block text-sm font-medium text-gray-700">Số điện thoại</label>
                         <input type="text" name="phone" id="phone" required
-                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]" />
+                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 text-sm shadow-sm bg-white/90 focus:border-[#3e2613] focus:ring-[#3e2613]" />
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@
 
                             <!-- Button trigger -->
                             <div @click="toggle"
-                                class="flex items-center justify-between rounded-xl border border-gray-300 p-3 text-sm shadow-sm transition focus-within:ring-2 focus-within:ring-[#3e2613] focus-within:border-[#3e2613]">
+                                class="bg-white/90 flex items-center justify-between rounded-xl border border-gray-300 p-3 text-sm shadow-sm transition focus-within:ring-2 focus-within:ring-[#3e2613] focus-within:border-[#3e2613]">
                                 <span x-text="selected?.label || '-- Chọn dịch vụ --'" class="text-gray-800"></span>
                                 <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -72,30 +72,30 @@
                     <div>
                         <label for="hours" class="block text-sm font-medium text-gray-700">Số giờ</label>
                         <input type="number" name="hours" id="hours" min="1" required
-                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]" />
+                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 bg-white/90 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]" />
                     </div>
 
                     <div>
                         <label for="date" class="block text-sm font-medium text-gray-700">Ngày đến</label>
                         <input type="date" name="date" id="date" required
-                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]" />
+                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 bg-white/90 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]" />
                     </div>
                     <div>
                         <label for="time" class="block text-sm font-medium text-gray-700">Thời gian đến</label>
                         <input type="time" name="time" id="time" required
-                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]" />
+                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 bg-white/90 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]" />
                     </div>
 
                     <div class="md:col-span-2">
                         <label for="note" class="block text-sm font-medium text-gray-700">Lời nhắn</label>
                         <textarea name="note" id="note" rows="4"
-                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]"></textarea>
+                            class="mt-1 w-full rounded-xl border border-gray-300 p-3 bg-white/90 text-sm shadow-sm focus:border-[#3e2613] focus:ring-[#3e2613]"></textarea>
                     </div>
                 </div>
 
                 <div class="text-center">
                     <button type="submit"
-                        class="inline-block rounded-xl bg-[#3e2613] px-6 py-3 text-white text-sm font-medium shadow-md hover:bg-[#2c1a0f] transition">
+                        class="cursor-pointer inline-block rounded-xl bg-[#3e2613] px-6 py-3 text-white text-sm font-medium shadow-md hover:bg-[#2c1a0f] transition">
                         Đặt chỗ ngay
                     </button>
                 </div>

@@ -22,10 +22,17 @@
     --color-beige-600: #b88257;
     --color-beige-700: #936a4e;
     --color-beige-900: #3e2613;
+
+
+    --color-vintage-50: #be9c79;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.marcellus {
+    font-family: Marcellus;
 }
 
 .bg-beige-900\/60 {
@@ -45,4 +52,59 @@ html {
     transition-property: all;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     white-space: nowrap;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+}
+
+.has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.cta { background-attachment: fixed; }
+
+.title-intro {
+    z-index: 5;
+    font-family: Marcellus;
+    text-transform: uppercase;
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    white-space: nowrap;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    text-align: inherit;
+    line-height: 78px;
+    letter-spacing: 5px;
+    font-weight: 300;
+    font-size: 68px;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+}
+
+.delay-0 { animation-delay: 0ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-600 { animation-delay: 600ms; }
+
+@media (max-width: 640px) {
+    .title-intro {
+        font-size: 36px;
+        line-height: normal;
+    }
+}
+
+@media (max-width: 640px) {
+    .responsive-bg {
+        background-position: "bottom" !important;
+        background-image: url('../../public/assets/images/intro-mobile.jpg') !important;
+    }
 }

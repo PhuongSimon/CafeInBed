@@ -1,11 +1,11 @@
-<div class="py-16 sm:pt-28" id="spaces">
+<div class="py-8 sm:pt-28" id="spaces">
     <div class="max-w-6xl px-4 sm:px-6 mx-auto">
         <div class="max-w-3xl w-full text-center mx-auto">
             <h2 class="mb-0 text-blue-800 font-bold text-2xl">
-                Không gian ở Chidori
+                Không gian ở Coffee In Bed
             </h2>
             <h3 class="mt-2 text-lg text-blue-300">
-                Bạn cần bao nhiêu riêng tư, Chidori cũng có!
+                Bạn cần bao nhiêu riêng tư, Coffee In Bed cũng có!
             </h3>
         </div>
     </div>
@@ -243,80 +243,28 @@
             style="width: 700vw; transition-duration: 1000ms; transform: translateX(0vw);"
             data-carousel-target="slideContainer">
             {{-- Slide 1 --}}
-            <div class="w-screen" data-carousel-target="slide">
-                <div
-                    class="max-w-6xl h-max sm:h-full mx-auto px-4 flex flex-wrap-reverse sm:flex-nowrap sm:space-x-10">
-                    {{-- Details --}}
-                    <div class="w-full sm:w-1/2 lg:w-1/3 sm:pt-8">
-                        <span class="uppercase text-blue-400 text-xs font-bold tracking-wider">Không gian</span>
-                        <h4 class="text-blue-900 font-bold text-2xl">Café Space</h4>
-                        <p class="mt-2">Café Space là không gian chung, không giới hạn thời gian sử dụng tại mỗi chi
-                            nhánh của Chidori. Như một góc cà phê thân thuộc cho những buổi gặp mặt của bạn cùng bạn bè.
-                        </p>
-                        <ul class="mt-6 flex flex-wrap justify-between">
-                            <li class="w-1/2 p-2 text-center text-beige-700 font-semibold text-sm">
-                                <img class="h-24 w-24 mx-auto object-contain" loading="lazy"
-                                    src="{{ asset('assets/images/camera.png') }}">
-                                <p>Hẹn hò cùng bạn bè</p>
-                            </li>
-                            <li class="w-1/2 p-2 text-center text-beige-700 font-semibold text-sm">
-                                <img class="h-24 w-24 mx-auto object-contain" loading="lazy"
-                                    src="{{ asset('assets/images/time.png') }}">
-                                <p>Sử dụng không giới hạn thời gian</p>
-                            </li>
-
-                        </ul>
-                        <div class="mt-8 flex flex-col space-y-2">
-                            <a class="btn bg-blue-100 hover:bg-blue-200 text-blue-700 hover:text-blue-600 rounded-full"
-                                href="/vi/spaces/cafe-space/">Xem chi tiết</a>
-                        </div>
-                    </div>
-
-                    {{-- Images --}}
-                    <div class="w-full sm:w-1/2 lg:w-2/3 h-[70vh] sm:h-auto mx-auto">
-                        <div class="grid grid-cols-2 gap-2 p-4 bg-white rounded-2xl shadow-lg">
-                            <div
-                                class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24"
-                                    alt="Cozy cafe interior"
-                                    class="w-full h-auto sm:h-[300px] object-cover hover:scale-105 transition-transform duration-300">
-                            </div>
-
-                            <!-- Image 2 -->
-                            <div
-                                class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
-                                    alt="Coffee and pastries"
-                                    class="w-full h-auto sm:h-[300px] object-cover hover:scale-105 transition-transform duration-300">
-                            </div>
-
-                            <!-- Image 3 -->
-                            <div
-                                class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56"
-                                    alt="Barista preparing coffee"
-                                    class="w-full h-auto sm:h-[300px] object-cover hover:scale-105 transition-transform duration-300">
-                            </div>
-
-                            <!-- Image 4 -->
-                            <div
-                                class="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8"
-                                    alt="Coffee shop atmosphere"
-                                    class="w-full h-auto sm:h-[300px] object-cover hover:scale-105 transition-transform duration-300">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            @include('components.slides.room-slide', [
+                'title' => 'Café Space',
+                'description' => 'Café Space là không gian chung, không giới hạn thời gian sử dụng tại mỗi chi
+                            nhánh của Coffee In Bed. Như một góc cà phê thân thuộc cho những buổi gặp mặt của bạn cùng bạn bè.',
+                'features' => [
+                    ['icon' => asset('assets/images/camera.png'), 'text' => 'Hẹn hò cùng bạn bè'],
+                    ['icon' => asset('assets/images/time.png'), 'text' => 'Sử dụng không giới hạn thời gian'],
+                ],
+                'images' => [
+                    ['src' => 'https://images.unsplash.com/photo-1554118811-1e0d58224f24', 'alt' => 'Meeting Room 1'],
+                    ['src' => 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085', 'alt' => 'Meeting Room 2'],
+                    ['src' => 'https://images.unsplash.com/photo-1600093463592-8e36ae95ef56', 'alt' => 'Meeting Room 3'],
+                    ['src' => 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8', 'alt' => 'Meeting Room 4'],
+                ],
+                'link' => '/vi/spaces/meeting-room',
+            ])
 
             @include('components.slides.room-slide', [
                 'title' => 'Study Box',
                 'description' => 'Study Box là giải pháp lý tưởng cho những ai cần không gian để tập trung làm việc hoặc “chạy deadlines” mà không giới hạn thời gian. Được bố trí như những chiếc kén nhỏ riêng biệt trong không gian cafe chung, Study Box mang lại cảm giác yên tĩnh, đảm bảo tập trung cao độ nhưng vẫn giữ được sự kết nối với không khí năng động xung quanh.',
                 'features' => [
                     ['icon' => asset('assets/images/camera.png'), 'text' => 'Không giới hạn thời gian sử dụng'],
-                    ['icon' => asset('assets/images/time.png'), 'text' => 'Làm việc trong không gian riêng biệt'],
                     ['icon' => asset('assets/images/time.png'), 'text' => 'Thích hợp cho làm việc dài hạn và tập trung tối đa'],
                 ],
                 'images' => [
@@ -343,8 +291,6 @@
                 ],
                 'link' => '/vi/spaces/meeting-room',
             ])
-
-
         </div>
     </div>
 </div>

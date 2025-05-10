@@ -16,6 +16,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merienda&family=Oswald:wght@300;400;500&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="{{ asset('assets/images/logo.svg') }}">
 </head>
 
@@ -24,9 +26,10 @@
 
     <main>
         @include('sections.intro')
-        @include('sections.about_us')
+        @include('sections.about-us')
         @include('sections.spaces')
         @include('sections.menu')
+        @include('sections.cta')
     </main>
 
     @include('footer')
@@ -50,29 +53,29 @@
 
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const popup = document.getElementById('promotion-popup');
-        const closeBtn = document.getElementById('close-popup');
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const popup = document.getElementById('promotion-popup');
+    //     const closeBtn = document.getElementById('close-popup');
 
-        // Mở popup khi tải trang
-        popup.style.display = 'flex';
+    //     // Mở popup khi tải trang
+    //     popup.style.display = 'flex';
 
-        // Đóng popup khi click vào nút X
-        closeBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            popup.style.display = 'none';
-        });
+    //     // Đóng popup khi click vào nút X
+    //     closeBtn.addEventListener('click', function (e) {
+    //         e.stopPropagation();
+    //         popup.style.display = 'none';
+    //     });
 
-        // Ngăn chặn đóng popup khi click ngoài vùng
-        popup.addEventListener('click', function (e) {
-            e.stopPropagation(); // Không làm gì cả
-        });
+    //     // Ngăn chặn đóng popup khi click ngoài vùng
+    //     popup.addEventListener('click', function (e) {
+    //         e.stopPropagation(); // Không làm gì cả
+    //     });
 
-        // Ngăn đóng khi click vào phần popup con
-        popup.querySelector('a').addEventListener('click', function (e) {
-            e.stopPropagation();
-        });
-    });
+    //     // Ngăn đóng khi click vào phần popup con
+    //     popup.querySelector('a').addEventListener('click', function (e) {
+    //         e.stopPropagation();
+    //     });
+    // });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
